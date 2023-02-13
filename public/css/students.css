@@ -1,0 +1,93 @@
+:root {
+    --color-default-0: hsl(222, 19%, 11%);
+    --color-default-1: hsl(222, 19%, 13%);
+    --color-default-2: hsl(200, 18%, 23%);
+    --color-default-3: hsl(199, 18%, 33%);
+    --color-default-4: hsl(199, 18%, 38%);
+    --color-outline-1: hsl(205, 100%, 50%);
+    --color-text-1: #eee;
+    --color-text-2: #ddd;
+    --color-text-3: #999;
+    --color-link-1: hsl(221, 63%, 55%);
+    --color-link-2: hsl(227, 42%, 72%);
+    color-scheme: dark light;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:after, :before {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+*, :after, :before {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background: var(--color-default-0);
+    color: var(--color-text-1);
+    font-size: 18px;
+    font-family: 'Roboto', 'Vazirmatn', sans-serif;
+    overflow-x: hidden;
+    transition: background .25s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-2);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+select {
+    background: url("../icons/selector.svg") no-repeat right .2rem center/20px 20px;
+    appearance: none;
+}
+
+main {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: var(--color-default-2);
+    user-select: none;
+    margin-top: 60px;
+}
+
+footer p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-text-3);
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--color-link-2);
+}

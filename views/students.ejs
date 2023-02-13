@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <title>Students Page | SGG</title>
+    <script type="text/javascript" src="js/mobile.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBS951EPSQ"></script>
+    <script type="text/javascript" src="js/gtag.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Vazirmatn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/students.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <!-- mini header -->
+    <header class="mini_header">
+        <!-- mobile navbar -->
+        <nav class="mobile_nav">
+            <div class="nav_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu_container">
+                <div class="menu_list">
+                    <p data-lang="menu_list_p_1">Scroll to:</p>
+                    <ul>
+                        <li><a href="#apps-list" data-lang="scroll_to1">Apps_list</a></li>
+                        <li><a href="#games-grabber" data-lang="scroll_to2">Games_Grabber</a></li>
+                    </ul>
+                    <p data-lang="menu_list_p_2">Language:</p>
+                    <select class="lang_selector nav_lang_selector">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                    <p id="sign_in_p" data-lang="menu_list_p_3">Sign In:</p>
+                    <button class="sign_in nav_sign_in"><img src="icons/login-steam.png"></button>
+                    <div class="nav_footer" data-lang="footer_p">graduation college project by these <a target="_top" href="./students" rel="noopener noreferrer">students</a>.</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- website logo -->
+        <div class="website_logo">
+            <a href="./" target="_self">SGG<img src="icons/logo.svg"></a>
+        </div>
+
+        <div class="navbar_center">
+            <a href="#apps-list" data-lang="scroll_to1">Apps_list</a>
+            <a href="#games-grabber" data-lang="scroll_to2">Games_Grabber</a>
+            <select class="lang_selector">
+                <option value="0" selected data-lang="lang_selector">Language</option>
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+
+        <div class="navbar_right">
+            <div class="light_mode" value="dark"><img src="icons/brightness-down.svg"></div>
+            <% if (!user) { %>
+            <div class="sign_in"><a href="./login"><img src="icons/power-off.svg">Sign-In</a></div>
+            <% } else { %>
+            <span class="_break"></span>
+            <div class="u_dropdown">
+                <div class="u_dropicon">
+                    <p id="user_name"><%= user.displayName %></p>
+                    <a href="#" target="_self">
+                        <img src="<%= user.photos[1].value %>">
+                    </a>
+                </div>
+                <div class="u_dropdown_content">
+                    <a href="../user/<%= user.id %>">
+                        <p>Your Profile</p>
+                        <img src="../icons/user-circle.svg">
+                    </a>
+                    <a href="../settings">
+                        <p>Settings</p>
+                        <img src="../icons/settings.svg">
+                    </a>
+                    <a href="../auth/logout">
+                        <p>Sign out</p>
+                        <img src="../icons/logout.svg">
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </header>
+
+    <!-- large header -->
+    <header class="header">
+        <h1 class="diplay_1" data-lang="header_p_1"></h1>
+        <p class="diplay_2" data-lang="header_p_2"></p>
+    </header>
+
+    <!-- main content -->
+    <main>
+        
+    </main>
+    <footer>
+        <p data-lang="footer_p">graduation college project by these <a target="_top" href="./students" rel="noopener noreferrer">students</a>.</p>
+    </footer>
+</body>
+</html>
