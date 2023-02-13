@@ -22,6 +22,7 @@ passport.deserializeUser(function(obj, done) {
 app.use(cors({ origin: true }))
 app.options('*', cors())
 
+// passport login
 passport.use(new SteamStrategy({
     returnURL: process.env.BASE_URL + '/auth/steam/return',
     realm: process.env.BASE_URL + '/',
@@ -69,5 +70,3 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log('server booting...')
 })
-
-module.exports = app;
