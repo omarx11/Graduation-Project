@@ -141,13 +141,13 @@ async function records() {
 
 // saving records to the database
 // run one time when server starts
-setTimeout(() => onlineUsers(), 1000 * 15);
-setTimeout(() => topGames(), 1000 * 60 * 1);
-setTimeout(() => records(), 1000 * 60 * 2);
+// setTimeout(() => onlineUsers(), 1000 * 15);
+// setTimeout(() => topGames(), 1000 * 60 * 1);
+// setTimeout(() => records(), 1000 * 60 * 2);
 
-// run every 1 hour
-setInterval(() => onlineUsers(), 1000 * 60 * 60);
-setInterval(() => topGames(), 1000 * 60 * 61);
-setInterval(() => records(), 1000 * 60 * 62);
+// // run every 1 hour
+// setInterval(() => onlineUsers(), 1000 * 60 * 60);
+// setInterval(() => topGames(), 1000 * 60 * 61);
+// setInterval(() => records(), 1000 * 60 * 62);
 
 module.exports = router;

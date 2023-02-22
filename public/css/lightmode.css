@@ -2,22 +2,21 @@
 ================================================== */
 
 body.light {
-    background-color: #bac4e3;
+    background: radial-gradient(#fff, #99A6D5);
     transition: background .25s;
 }
 
 body.light header {
     background-color: #99A6D5;
-    box-shadow: 0 1px 4px #123;
+    box-shadow: 0 0 4px 0 #123;
 }
 
 body.light .diplay_1 {
-    color: #123;
-    text-shadow: 1px 1px #ddd;
+    text-shadow: 1px 1px #000;
 }
 
 body.light .diplay_2 {
-    color: #eee;
+    color: #123;
 }
 
 body.light .mini_header {
@@ -77,14 +76,13 @@ body.light .nav_footer a {
 
 body.light .directions {
     background-color: #99A6D5;
-    color: #eee;
-    box-shadow: 5px 5px #7883a9;
-    text-shadow: 2px 2px 4px #123;
+    color: #000;
+    box-shadow: 0 0 20px -6px #123;
     border-color: #8b97c2;
 }
 
 body.light .directions li {
-    color: #ddd;
+    color: #123;
 }
 
 body.light .form_input .example {

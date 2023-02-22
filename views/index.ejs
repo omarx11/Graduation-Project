@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/lightmode.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <!-- mini header -->
@@ -57,7 +58,7 @@
 
                 <!-- SteamID form input -->
                 <div class="form_input">
-                    <p class="example" data-lang="example">Example: 76561198866821009</p>
+                    <p class="example" data-lang="example">Example: 76561198965877925 | ikatakuri</p>
                     <form class="steamid_form" method="post">
                         <input type="text" class="steam_id_input" name="steamId" maxlength="30" autocomplete="off" placeholder="Enter your steamID">
                     </form>
@@ -150,8 +151,8 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p data-lang="footer_p">graduation college project, <a target="_top" href="./students" rel="noopener noreferrer">more info</a></p>
-    </footer>
+
+    <!-- footer saction -->
+    <%- include("partials/footer.ejs"); %>
 </body>
 </html>

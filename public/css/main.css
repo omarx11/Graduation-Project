@@ -50,7 +50,7 @@ html, body {
 }
 
 body {
-    background: var(--color-default-0);
+    background: radial-gradient(var(--color-default-2), #020404);
     color: var(--color-text-1);
     font-size: 18px;
     font-family: 'Roboto', 'Vazirmatn', sans-serif;
@@ -121,12 +121,9 @@ main .container_1 {
 }
 
 .steam_finder .directions {
-    background-color: var(--color-default-1);
     max-width: 580px;
     border-radius: 6px;
-    box-shadow: 5px 5px var(--color-default-2);
-    border-top: 1px solid var(--color-default-2);
-    border-left: 1px solid var(--color-default-2);
+    box-shadow: 0 0 14px -6px #eee;
 }
 
 .steam_finder .directions p {
@@ -615,14 +612,15 @@ main .container_1 {
     margin-bottom: 10px;
     animation: skeleton-loading 1s linear infinite alternate;
     border: 0;
+    box-shadow: none;
 }
 
 @keyframes skeleton-loading {
     0% {
-        background-color: rgb(80, 104, 116);
+        background-color: rgba(80, 104, 116, 0.6);
     }
     100% {
-        background-color: rgb(63, 73, 79);
+        background-color: rgba(63, 73, 79, 0.4);
     }
 }
 
@@ -643,7 +641,7 @@ main .container_1 {
 }
 
 .user_list {
-    width: 340px;
+    width: 400px;
 }
 
 .user_list_btn {
@@ -653,7 +651,6 @@ main .container_1 {
     padding: 0 10px;
     font-size: 16px;
     font-weight: bold;
-    background-color: var(--color-default-2);
     justify-content: center;
 }
 
@@ -666,7 +663,7 @@ main .container_1 {
 .users_content {
     display: none;
     padding: 10px;
-    background-color: var(--color-default-2);
+    background-color: transparent;
 }
 
 .user_list .users_content {
@@ -694,7 +691,7 @@ main .container_1 {
     border: 0;
     border-radius: 4px;
     padding-left: 34px;
-    background-color: var(--color-default-4);
+    background-color: var(--color-default-2);
 }
 
 .friends_search input:focus {
@@ -710,6 +707,7 @@ main .container_1 {
     max-height: 300px;
     overflow-y: auto;
     padding-right: 7px;
+    border-top: 1px solid var(--color-default-2);
 }
 
 .users_content .users_options.d2 p {
@@ -733,12 +731,12 @@ main .container_1 {
 }
 
 .users_options::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: var(--color-default-1);
     border-radius: 25px;
 }
 
 .users_options::-webkit-scrollbar-thumb {
-    background-color: #aaa;
+    background-color: var(--color-default-3);
     border-radius: 25px;
 }
 
@@ -771,8 +769,6 @@ main .container_1 {
     border-radius: 5px;
     background-color: var(--color-link-1);
 }
-
-/* ================= footer ================= */
 
 .games .g_footer {
     display: flex;
@@ -835,26 +831,6 @@ main .container_1 {
     background-color: var(--color-link-1);
     font-weight: bold;
     pointer-events: none;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    background-color: var(--color-default-1);
-    user-select: none;
-}
-
-footer p {
-    color: rgb(160, 160, 162);
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-footer a {
-    color: var(--color-link-2);
 }
 
 /* # Arabic Styles

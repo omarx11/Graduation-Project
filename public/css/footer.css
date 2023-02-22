@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    width: 100%;
+    background-color: transparent;
+    user-select: none;
+}
+
+footer .left_doc {
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+}
+
+footer .right_doc {
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+}
+
+footer p {
+    color: rgb(160, 160, 162);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--color-link-2);
+}

@@ -317,8 +317,6 @@ async function after_submit_id() {
     document.querySelector('.loader.s_1').style.display = "inline-block";
 
     const data = await get_games_data(FDSerialized.steamId);
-    console.log('response', data);
-    console.log('success', data.success);
     
     if (data) {
         document.querySelector('.loader.s_1').style.display = "none";
@@ -540,7 +538,6 @@ sort_options.addEventListener('change', (e) => {
             const sortLast2weak = state.gamesData.sort((a, b) => { 
                 return b.playtime_2weeks - a.playtime_2weeks;
             }).filter((a) => a.playtime_2weeks != null);
-            console.log(sortLast2weak)
             state.sortLast2weak = sortLast2weak;
             build_html_data();
         }
@@ -708,7 +705,6 @@ function startAddingFriends() {
     friends_search.addEventListener('keyup', () => {
         let arr = [];
         let searchWord = friends_search.value.toLowerCase();
-        console.log(searchWord)
         arr = state.friendsList.filter(data => {
             return data.personaname.toLowerCase().startsWith(searchWord);
         }).map(data => {
@@ -756,9 +752,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const data = await get_user_friends();
     if (!data) return;
 
-    console.log(data)
     state.friendsList = await data.players;
-
     startAddingFriends();
 });
 
@@ -766,7 +760,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const data = await saveSearchValue();
     if (!data) return;
 
-    console.log(data)
     state.searchUsers = data;
 
     user_list_btn2.addEventListener('click', () => user_list2.classList.toggle('active'));
