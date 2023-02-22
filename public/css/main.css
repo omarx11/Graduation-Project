@@ -4,7 +4,7 @@
     --color-default-2: hsl(200, 18%, 23%);
     --color-default-3: hsl(199, 18%, 33%);
     --color-default-4: hsl(199, 18%, 38%);
-    --color-outline-1: hsl(205, 100%, 50%);
+    --color-outline-1: hsla(185, 100%, 50%, 0.6);
     --color-text-1: #eee;
     --color-text-2: #ddd;
     --color-text-3: #999;
@@ -32,11 +32,6 @@ html {
 * {
     padding: 0;
     margin: 0;
-}
-
-:after, :before {
-    text-decoration: inherit;
-    vertical-align: inherit;
 }
 
 *, :after, :before {
@@ -123,6 +118,7 @@ main .container_1 {
 .steam_finder .directions {
     max-width: 580px;
     border-radius: 6px;
+    color: var(--color-link-2);
     box-shadow: 0 0 14px -6px #eee;
 }
 
@@ -139,7 +135,7 @@ main .container_1 {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 20px;
-    color: var(--color-text-2);
+    color: #ccc;
 }
 
 .steam_finder .directions li {
@@ -234,12 +230,16 @@ main .container_1 {
     color: var(--color-link-2);
 }
 
+.form_input form {
+    position: relative;
+}
+
 .form_input input[type=text] {
-    background-color: var(--color-text-1);
-    background-image: url('../icons/search.svg');
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url('../icons/search-light.svg');
     background-position: 8px 8px;
     background-size: 28px;
-    color: #5d667e;
+    color: #7bacc1b1;
     border-radius: 6px;
     font-size: 1.4em;
     font-weight: bold;
@@ -247,10 +247,28 @@ main .container_1 {
     margin-bottom: 4px;
     width: 100%;
     border: 2px solid;
+    outline: 0;
 }
 
 .form_input input[type=text]:focus {
     outline: 3px solid var(--color-outline-1);
+}
+
+.form_input input::placeholder {
+    color: #7bacc1b1;
+}
+
+.clear_input {
+    /* display: none; */
+    position: absolute;
+    right: -42px;
+    top: 11px;
+    cursor: pointer;
+}
+
+.clear_input img {
+    display: block;
+    width: 26px;
 }
 
 .container_1 .steam_finder .games {
@@ -315,6 +333,9 @@ main .container_1 {
     font-size: 1.2em;
     font-weight: bold;
     padding-bottom: 4px;
+    background: linear-gradient(var(--color-default-2), #ccc);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .total_playtime .all_time {
@@ -327,7 +348,7 @@ main .container_1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-default-3);
+    background-color: hsla(199, 18%, 26%, 1);
     min-height: 40px;
     border-radius: 8px 8px 0 0;
     user-select: none;
@@ -354,8 +375,8 @@ main .container_1 {
     padding: .25em 2em .25em .5em;
     font-size: 1rem;
     cursor: pointer;
-    color: var(--color-text-1);
-    background-color: var(--color-default-4);
+    color: var(--color-text-2);
+    background-color: var(--color-default-3);
 }
 
 .g_header .apps_filter:hover {
@@ -369,8 +390,8 @@ main .container_1 {
     padding: .28em 1.2em .28em .5em;
     font-size: 1rem;
     cursor: pointer;
-    color: var(--color-text-1);
-    background-color: var(--color-default-4);
+    color: var(--color-text-2);
+    background-color: var(--color-default-3);
 }
 
 .g_header .apps_length:hover {
@@ -381,7 +402,7 @@ main .container_1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ddd;
+    color: #ccc;
 }
 
 .h_right label {
@@ -390,7 +411,7 @@ main .container_1 {
 }
 
 .h_right ._break {
-    background-color: var(--color-default-4);
+    background-color: var(--color-default-3);
     width: 2px;
     height: 26px;
     margin-right: 14px;
@@ -399,7 +420,7 @@ main .container_1 {
 
 .g_header .apps_search {
     color: #eee;
-    background-color: #546d78;
+    background-color: #546d7896;
     padding: 7px 8px;
     font-size: 0.75em;
     border-radius: 6px;
@@ -426,7 +447,7 @@ main .container_1 {
 }
 
 .games .g_container {
-    background-color: var(--color-default-1);
+    background-color: hsla(222, 19%, 11%, 0.2);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 2em;
@@ -678,9 +699,9 @@ main .container_1 {
 .friends_search img {
     display: block;
     position: absolute;
-    padding-top: 4px;
-    padding-left: 4px;
-    width: 22px;
+    padding-top: 6px;
+    padding-left: 6px;
+    width: 18px;
 }
 
 .friends_search input {
@@ -695,7 +716,7 @@ main .container_1 {
 }
 
 .friends_search input:focus {
-    outline: 3px solid var(--color-link-1);
+    outline: 3px solid var(--color-outline-1);
 }
 
 .friends_search input::placeholder {
@@ -761,20 +782,18 @@ main .container_1 {
 
 .users_options li p {
     font-size: 1.1em;
-    color: lightgreen;
-    color: orangered;
 }
 
 .users_options li:hover, li.selected {
     border-radius: 5px;
-    background-color: var(--color-link-1);
+    background-color: var(--color-default-2);
 }
 
 .games .g_footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-default-3);
+    background-color: hsla(199, 18%, 26%, 1);
     min-height: 40px;
     border-radius: 0 0 8px 8px;
     user-select: none;
@@ -821,6 +840,7 @@ main .container_1 {
     margin-left: 3px;
     display: block;
     cursor: pointer;
+    color: var(--color-text-2);
 }
 
 .pagination .paginate_button:first-child {

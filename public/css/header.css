@@ -55,7 +55,7 @@
 }
 
 .navbar_center a:hover {
-    background-color: var(--color-link-1);
+    background-color: var(--color-outline-1);
 }
 
 .mini_header .website_logo a {

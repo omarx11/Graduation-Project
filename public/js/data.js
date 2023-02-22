@@ -402,6 +402,9 @@ steamid_form.addEventListener('submit', (event) => {
     after_submit_id();
 });
 
+// clear search box button
+
+
 const relativeTimePeriods_en = [
     [31536000, 'year'],
     [2419200, 'month'],
