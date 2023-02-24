@@ -118,7 +118,6 @@ main .container_1 {
 .steam_finder .directions {
     max-width: 580px;
     border-radius: 6px;
-    color: var(--color-link-2);
     box-shadow: 0 0 14px -6px #eee;
 }
 
@@ -129,6 +128,7 @@ main .container_1 {
     padding-bottom: 20px;
     font-size: 1.5em;
     font-weight: bold;
+    color: hsla(227, 42%, 72%, 0.9);
 }
 
 .steam_finder .directions ol {
@@ -158,12 +158,14 @@ main .container_1 {
 
 .form_input .search_history {
     color: var(--color-link-2);
+    opacity: 0.9;
     cursor: pointer;
     user-select: none;
+    font-size: 0.94em;
 }
 
 .search_history img {
-    width: 18px;
+    width: 17px;
     vertical-align: -3px;
 }
 
@@ -235,23 +237,29 @@ main .container_1 {
 }
 
 .form_input input[type=text] {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     background-image: url('../icons/search-light.svg');
     background-position: 8px 8px;
     background-size: 28px;
     color: #7bacc1b1;
-    border-radius: 6px;
     font-size: 1.4em;
     font-weight: bold;
     padding: 8px 0 8px 50px;
+    border-radius: 4px;
     margin-bottom: 4px;
     width: 100%;
-    border: 2px solid;
-    outline: 0;
+    border: 0;
+    outline: 3px solid;
+    transition: 0.25s ease-out;
+}
+
+.form_input input[type=text]:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.25s ease-in;
 }
 
 .form_input input[type=text]:focus {
-    outline: 3px solid var(--color-outline-1);
+    outline-color: var(--color-outline-1);
 }
 
 .form_input input::placeholder {
@@ -259,11 +267,21 @@ main .container_1 {
 }
 
 .clear_input {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: -42px;
-    top: 11px;
+    top: 10px;
     cursor: pointer;
+    opacity: 0.6;
+    z-index: 100;
+}
+
+.clear_input:hover {
+    opacity: 0.9;
+}
+
+.clear_input.active {
+    display: block;
 }
 
 .clear_input img {

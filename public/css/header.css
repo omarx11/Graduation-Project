@@ -55,7 +55,7 @@
 }
 
 .navbar_center a:hover {
-    background-color: var(--color-outline-1);
+    background-color: var(--color-link-1);
 }
 
 .mini_header .website_logo a {
@@ -87,7 +87,7 @@
 }
 
 .lang_selector:hover {
-    outline: 3px solid var(--color-outline-1);
+    outline: 3px solid var(--color-link-1);
 }
 
 .mini_header .navbar_right {
@@ -118,7 +118,7 @@
 
 .sign_in a:hover, .sign_in a:active {
     border-color: transparent;
-    outline: 3px solid var(--color-outline-1);
+    outline: 3px solid var(--color-link-1);
 }
 
 .sign_in img {

@@ -321,6 +321,7 @@ async function after_submit_id() {
     if (data) {
         document.querySelector('.loader.s_1').style.display = "none";
         steam_id_input.value = '';
+        search_clear();
     }
 
     // check if steamid profile is private or not found
@@ -402,8 +403,23 @@ steamid_form.addEventListener('submit', (event) => {
     after_submit_id();
 });
 
-// clear search box button
+const search_clear_button = document.querySelector('.clear_input');
 
+// clear search box button
+function search_clear() {
+    if (steam_id_input.value !== "") {
+        search_clear_button.classList.add("active");
+    } else {
+        search_clear_button.classList.remove("active");
+    }
+}
+
+steam_id_input.addEventListener('input', search_clear);
+
+search_clear_button.addEventListener('click', () => {
+    steam_id_input.value = "";
+    search_clear_button.classList.remove("active");
+});
 
 const relativeTimePeriods_en = [
     [31536000, 'year'],
